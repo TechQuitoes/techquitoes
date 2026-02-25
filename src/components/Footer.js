@@ -1,4 +1,4 @@
-import { Linkedin, Github, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
 const socials = [
   {
     icon: Linkedin,
@@ -7,10 +7,6 @@ const socials = [
   {
     icon: Github,
     link: "https://github.com/hariomruhela",
-  },
-  {
-    icon: Twitter,
-    link: "https://twitter.com/hariomruhela",
   },
 ];
 const Footer = () => {

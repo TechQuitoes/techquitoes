@@ -71,12 +71,9 @@ const Header = () => {
             Resume
           </a>
 
-          <a
-            href="#"
-            className="px-4 py-2 rounded-full border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-black transition"
-          >
+          <button className="px-4 py-2 rounded-full border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-black transition">
             Buy Me A Coffee
-          </a>
+          </button>
 
           <Link
             to="/contact"
@@ -159,12 +156,9 @@ const Header = () => {
               Resume
             </a>
 
-            <a
-              href="#"
-              className="block text-center px-4 py-2 rounded-full border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-black transition"
-            >
+            <button className="block text-center px-4 py-2 rounded-full border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-black transition">
               Buy Me A Coffee
-            </a>
+            </button>
 
             <Link
               to="/contact"
