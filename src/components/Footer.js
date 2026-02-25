@@ -1,101 +1,133 @@
-import React from 'react'
-
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTiktok,
-  FaXTwitter,
-} from "react-icons/fa6";
-
+import { Linkedin, Github, Twitter, Mail, Phone, MapPin } from "lucide-react";
+const socials = [
+  {
+    icon: Linkedin,
+    link: "www.linkedin.com/in/hariom-ruhela-551032289",
+  },
+  {
+    icon: Github,
+    link: "https://github.com/hariomruhela",
+  },
+  {
+    icon: Twitter,
+    link: "https://twitter.com/hariomruhela",
+  },
+];
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-12">
-
-        {/* LEFT SECTION */}
-        <div>
-          <h2 className="text-4xl font-bold mb-4">
-            Let’s <span className="text-purple-500">Connect.</span>
-          </h2>
-
-          <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-            We generate creative & innovative ideas for your business.
-            We thrive on collaboration, creativity, and a shared vision of
-            driving growth through technology and innovation. Our leaders
-            are masters of managing remote teams, fostering an environment
-            where every voice is heard, regardless of location.
-          </p>
-        </div>
-
-        {/* SERVICES */}
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Services</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            {[
-              "Website Development",
-              "E-commerce Development",
-              "Design Studio",
-              "Data Analytics and Dashboards",
-              "ChatGPT and AI Development",
-            ].map((service, i) => (
-              <li
-                key={i}
-                className="hover:text-white cursor-pointer transition"
-              >
-                {service}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* QUICK LINKS */}
-        <div>
-          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            {["About Us", "Portfolio", "Contact Us"].map((link, i) => (
-              <li
-                key={i}
-                className="hover:text-white cursor-pointer transition"
-              >
-                {link}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* CONTACT */}
-        <div>
-          <h3 className="text-lg font-semibold mb-4">
-            Connect@techQ
-          </h3>
-          <p className="text-gray-400 text-sm mb-4">
-            Let's build your future-ready solution.
-          </p>
-
-          {/* Social Icons */}
-          <div className="flex gap-4 text-lg mb-6">
-            <FaFacebookF className="hover:text-purple-500 cursor-pointer" />
-            <FaInstagram className="hover:text-purple-500 cursor-pointer" />
-            <FaTiktok className="hover:text-purple-500 cursor-pointer" />
-            <FaXTwitter className="hover:text-purple-500 cursor-pointer" />
-          </div>
-
-          <hr className="border-white/10 mb-4" />
-
-          <h4 className="font-semibold mb-2">How can we help?</h4>
-          <p className="text-sm text-gray-400">
-            hello@techquitoes.com
-          </p>
-          <p className="text-sm text-gray-400">
-            +91-7889822746
-          </p>
-        </div>
+    <footer className="relative overflow-hidden bg-black text-white pt-24 pb-12">
+      {/* Glow Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(45,212,191,0.12),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.12),transparent_45%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
       </div>
 
-      {/* BOTTOM BAR */}
-      <div className="border-t border-white/10 py-6 text-center text-sm text-gray-400">
-        Copyright © 2025 Techquitoes Solutions | All Rights Reserved
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+          {/* Brand */}
+          <div>
+            <h3 className="text-2xl font-semibold text-cyan-400">
+              Hariom Ruhela
+            </h3>
+            <p className="text-gray-400 mt-4 leading-relaxed">
+              Full-stack developer specializing in modern web applications,
+              e-commerce solutions, and AI-powered tools.
+            </p>
+
+            <div className="flex gap-3 mt-6">
+              {socials.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={i}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-lg bg-white/5 border border-white/10 
+        hover:bg-cyan-400 hover:text-black transition duration-300"
+                  >
+                    <Icon className="w-4 h-4" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-3 text-gray-400">
+              {["Home", "About", "Portfolio", "Contact"].map((item) => (
+                <li
+                  key={item}
+                  className="hover:text-cyan-400 cursor-pointer transition"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-semibold mb-4">Services</h4>
+            <ul className="space-y-3 text-gray-400">
+              {[
+                "Web Dev",
+                "App Dev",
+                "Custom Dev",
+                "AI SaaS",
+                "E-commerce",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="hover:text-cyan-400 cursor-pointer transition"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold mb-4">Get In Touch</h4>
+
+            <div className="space-y-4 text-gray-400">
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <span>hariomruhela0@gmail.com</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <span>+91 8770948303</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span>Based in India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="h-px bg-white/10 my-12" />
+
+        {/* Bottom */}
+        <div className="flex flex-col md:flex-row justify-between text-gray-400 text-sm gap-4">
+          <p>© 2026 Hariom. All rights reserved.</p>
+          <div className="flex gap-6">
+            <span className="hover:text-cyan-400 cursor-pointer transition">
+              Privacy Policy
+            </span>
+            <span className="hover:text-cyan-400 cursor-pointer transition">
+              Terms of Service
+            </span>
+          </div>
+        </div>
       </div>
     </footer>
   );
