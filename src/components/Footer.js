@@ -2,7 +2,7 @@ import { Linkedin, Github, Mail, Phone, MapPin } from "lucide-react";
 const socials = [
   {
     icon: Linkedin,
-    link: "www.linkedin.com/in/hariom-ruhela-551032289",
+    link: "https://www.linkedin.com/in/hariom-ruhela-551032289",
   },
   {
     icon: Github,
